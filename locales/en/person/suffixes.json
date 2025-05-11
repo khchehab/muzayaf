@@ -1,0 +1,42 @@
+{
+  "academic": [
+    "AB",
+    "BA",
+    "BS",
+    "BE",
+    "BFA",
+    "BTech",
+    "LLB",
+    "BSc",
+    "MA",
+    "MS",
+    "MFA",
+    "LLM",
+    "MLA",
+    "MBA",
+    "MSc",
+    "MEng",
+    "JD",
+    "MD",
+    "DO",
+    "PharmD",
+    "PhD",
+    "EdD",
+    "DBA",
+    "LLD",
+    "EngD"
+  ],
+  "generational": [
+    "Jr.",
+    "Sr.",
+    "I",
+    "II",
+    "III",
+    "IV",
+    "V",
+    "VI",
+    "VII",
+    "VIII",
+    "IX"
+  ]
+}

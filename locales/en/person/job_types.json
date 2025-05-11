@@ -1,0 +1,24 @@
+{
+  "types": [
+    "Officer",
+    "Engineer",
+    "Developer",
+    "Analyst",
+    "Specialist",
+    "Manager",
+    "Director",
+    "Coordinator",
+    "Administrator",
+    "Supervisor",
+    "Consultant",
+    "Advisor",
+    "Technician",
+    "Representative",
+    "Agent",
+    "Associate",
+    "Assistant",
+    "Planner",
+    "Strategist",
+    "Executive"
+  ]
+}
