@@ -1,8 +1,11 @@
 # Muzayaf
 
-Muzayaf is a feature-rich data generation library for Go. It provides a comprehensive set of tools for generating random test data such as colors, dates, numbers, and person-related information, with support for localization and customization.
+Muzayaf is a feature-rich data generation library for Go. It provides a comprehensive set of tools for generating random
+test data such as colors, dates, numbers, and person-related information, with support for localization and
+customization.
 
-The name "Muzayaf" (مزيف) comes from Arabic, meaning "fake" or "artificial," which perfectly captures the library's purpose of generating synthetic data for testing and development purposes.
+The name "Muzayaf" (مزيف) comes from Arabic, meaning "fake" or "artificial," which perfectly captures the library's
+purpose of generating synthetic data for testing and development purposes.
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/khchehab/muzayaf)](https://goreportcard.com/report/github.com/khchehab/muzayaf)
 [![Go Reference](https://pkg.go.dev/badge/github.com/khchehab/muzayaf.svg)](https://pkg.go.dev/github.com/khchehab/muzayaf)
@@ -14,15 +17,16 @@ The name "Muzayaf" (مزيف) comes from Arabic, meaning "fake" or "artificial,"
 - [Quick Start](#quick-start)
 - [Available Packages](#available-packages)
 - [Package Documentation](#package-documentation)
-  - [Color](#color)
-  - [Date](#date)
-  - [Number](#number)
-  - [Person](#person)
+    - [Color](#color)
+    - [Date](#date)
+    - [Number](#number)
+    - [Person](#person)
 - [Customization](#customization)
-  - [Localization](#localization)
-  - [Random Source](#random-source)
+    - [Localization](#localization)
+    - [Random Source](#random-source)
 - [Examples](#examples)
 - [Testing](#testing)
+- [Acknowledgments](#acknowledgments)
 - [License](#license)
 
 ## Installation
@@ -37,24 +41,24 @@ go get github.com/khchehab/muzayaf
 
 ```go
 import (
-    "github.com/khchehab/muzayaf/color"
-    "github.com/khchehab/muzayaf/date"
-    "github.com/khchehab/muzayaf/number"
-    "github.com/khchehab/muzayaf/person"
+"github.com/khchehab/muzayaf/color"
+"github.com/khchehab/muzayaf/date"
+"github.com/khchehab/muzayaf/number"
+"github.com/khchehab/muzayaf/person"
 )
 
 func main() {
-    // Generate random data
-    randomColor := color.RGB()
-    randomDate := date.Any()
-    randomNumber := number.Int()
-    randomName := person.FirstName()
-    
-    // Use the generated data
-    fmt.Println("Color:", randomColor.String())
-    fmt.Println("Date:", randomDate.Format("2006-01-02"))
-    fmt.Println("Number:", randomNumber)
-    fmt.Println("Name:", randomName)
+// Generate random data
+randomColor := color.RGB()
+randomDate := date.Any()
+randomNumber := number.Int()
+randomName := person.FirstName()
+
+// Use the generated data
+fmt.Println("Color:", randomColor.String())
+fmt.Println("Date:", randomDate.Format("2006-01-02"))
+fmt.Println("Number:", randomNumber)
+fmt.Println("Name:", randomName)
 }
 ```
 
@@ -62,12 +66,12 @@ func main() {
 
 Muzayaf consists of several sub-packages, each focused on specific types of data generation:
 
-| Package | Description | Import Path |
-|---------|-------------|-------------|
-| **[color](https://pkg.go.dev/github.com/khchehab/muzayaf/color)** | Generate random colors in RGB, HSL, CMYK formats and named colors | `github.com/khchehab/muzayaf/color` |
-| **[date](https://pkg.go.dev/github.com/khchehab/muzayaf/date)** | Generate random dates, times, months, weekdays, and timezones | `github.com/khchehab/muzayaf/date` |
+| Package                                                             | Description                                                                 | Import Path                          |
+|---------------------------------------------------------------------|-----------------------------------------------------------------------------|--------------------------------------|
+| **[color](https://pkg.go.dev/github.com/khchehab/muzayaf/color)**   | Generate random colors in RGB, HSL, CMYK formats and named colors           | `github.com/khchehab/muzayaf/color`  |
+| **[date](https://pkg.go.dev/github.com/khchehab/muzayaf/date)**     | Generate random dates, times, months, weekdays, and timezones               | `github.com/khchehab/muzayaf/date`   |
 | **[number](https://pkg.go.dev/github.com/khchehab/muzayaf/number)** | Generate random numbers in various formats (int, float, binary, hex, roman) | `github.com/khchehab/muzayaf/number` |
-| **[person](https://pkg.go.dev/github.com/khchehab/muzayaf/person)** | Generate random person data (names, genders, job titles) | `github.com/khchehab/muzayaf/person` |
+| **[person](https://pkg.go.dev/github.com/khchehab/muzayaf/person)** | Generate random person data (names, genders, job titles)                    | `github.com/khchehab/muzayaf/person` |
 
 ## Package Documentation
 
@@ -255,12 +259,12 @@ jobTitle := person.JobTitle()
 fmt.Println("Job title:", jobTitle) // e.g., "Senior Marketing Manager"
 
 // Creating a complete person example
-fmt.Printf("Full name: %s %s %s %s, %s\n", 
-    person.Prefix(), 
-    person.FirstName(), 
-    person.LastName(), 
-    person.Suffix(),
-    person.JobTitle())
+fmt.Printf("Full name: %s %s %s %s, %s\n",
+person.Prefix(),
+person.FirstName(),
+person.LastName(),
+person.Suffix(),
+person.JobTitle())
 // e.g., "Dr. Jane Smith PhD, Lead Marketing Director"
 ```
 
@@ -268,7 +272,8 @@ fmt.Printf("Full name: %s %s %s %s, %s\n",
 
 ### Localization
 
-Most data generation functions support localization through the `WithLocale` option. Currently, the library primarily supports English ("en") locale with the framework in place to add more locales.
+Most data generation functions support localization through the `WithLocale` option. Currently, the library primarily
+supports English ("en") locale with the framework in place to add more locales.
 
 ```go
 // Generate a month name in English
@@ -286,8 +291,8 @@ You can customize the random source used by the library for deterministic output
 
 ```go
 import (
-    "math/rand/v2"
-    "github.com/khchehab/muzayaf/random"
+"math/rand/v2"
+"github.com/khchehab/muzayaf/random"
 )
 
 // Set a custom random source with a fixed seed
@@ -329,6 +334,11 @@ Each package also includes benchmarks for performance testing:
 ```bash
 go test -bench=. ./...
 ```
+
+## Acknowledgments
+
+This library was inspired by [Faker.js](https://github.com/faker-js/faker), a popular JavaScript library for generating
+fake data. Some of the sample data sets were adapted from Faker.js to provide similar functionality in the Go ecosystem.
 
 ## License
 
