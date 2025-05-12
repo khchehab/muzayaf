@@ -2,6 +2,8 @@
 
 Muzayaf is a feature-rich data generation library for Go. It provides a comprehensive set of tools for generating random test data such as colors, dates, numbers, and person-related information, with support for localization and customization.
 
+The name "Muzayaf" (مزيف) comes from Arabic, meaning "fake" or "artificial," which perfectly captures the library's purpose of generating synthetic data for testing and development purposes.
+
 [![Go Report Card](https://goreportcard.com/badge/github.com/khchehab/muzayaf)](https://goreportcard.com/report/github.com/khchehab/muzayaf)
 [![Go Reference](https://pkg.go.dev/badge/github.com/khchehab/muzayaf.svg)](https://pkg.go.dev/github.com/khchehab/muzayaf)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
