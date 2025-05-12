@@ -9,15 +9,16 @@ Muzayaf is a feature-rich data generation library for Go. It provides a comprehe
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
-- [Packages](#packages)
-    - [Color](#color)
-    - [Date](#date)
-    - [Number](#number)
-    - [Person](#person)
+- [Quick Start](#quick-start)
+- [Available Packages](#available-packages)
+- [Package Documentation](#package-documentation)
+  - [Color](#color)
+  - [Date](#date)
+  - [Number](#number)
+  - [Person](#person)
 - [Customization](#customization)
-    - [Localization](#localization)
-    - [Random Source](#random-source)
+  - [Localization](#localization)
+  - [Random Source](#random-source)
 - [Examples](#examples)
 - [Testing](#testing)
 - [Contributing](#contributing)
@@ -31,9 +32,7 @@ To install Muzayaf, use `go get`:
 go get github.com/khchehab/muzayaf
 ```
 
-## Usage
-
-Import the necessary packages in your Go code:
+## Quick Start
 
 ```go
 import (
@@ -42,30 +41,34 @@ import (
     "github.com/khchehab/muzayaf/number"
     "github.com/khchehab/muzayaf/person"
 )
+
+func main() {
+    // Generate random data
+    randomColor := color.RGB()
+    randomDate := date.Any()
+    randomNumber := number.Int()
+    randomName := person.FirstName()
+    
+    // Use the generated data
+    fmt.Println("Color:", randomColor.String())
+    fmt.Println("Date:", randomDate.Format("2006-01-02"))
+    fmt.Println("Number:", randomNumber)
+    fmt.Println("Name:", randomName)
+}
 ```
 
-Then use the available functions to generate random data:
+## Available Packages
 
-```go
-// Generate a random RGB color
-rgbColor := color.RGB()
-fmt.Println("Random RGB color:", rgbColor.String())
+Muzayaf consists of several sub-packages, each focused on specific types of data generation:
 
-// Generate a random date
-randomDate := date.Any()
-fmt.Println("Random date:", randomDate.Format("2006-01-02"))
+| Package | Description | Import Path |
+|---------|-------------|-------------|
+| **[color](https://pkg.go.dev/github.com/khchehab/muzayaf/color)** | Generate random colors in RGB, HSL, CMYK formats and named colors | `github.com/khchehab/muzayaf/color` |
+| **[date](https://pkg.go.dev/github.com/khchehab/muzayaf/date)** | Generate random dates, times, months, weekdays, and timezones | `github.com/khchehab/muzayaf/date` |
+| **[number](https://pkg.go.dev/github.com/khchehab/muzayaf/number)** | Generate random numbers in various formats (int, float, binary, hex, roman) | `github.com/khchehab/muzayaf/number` |
+| **[person](https://pkg.go.dev/github.com/khchehab/muzayaf/person)** | Generate random person data (names, genders, job titles) | `github.com/khchehab/muzayaf/person` |
 
-// Generate a random integer between 10 and 20
-randomInt := number.Int(number.WithIntMin(10), number.WithIntMax(20))
-fmt.Println("Random integer:", randomInt)
-
-// Generate a random person
-firstName := person.FirstName()
-lastName := person.LastName()
-fmt.Printf("Random person: %s %s\n", firstName, lastName)
-```
-
-## Packages
+## Package Documentation
 
 ### Color
 
