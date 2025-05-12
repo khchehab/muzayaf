@@ -21,7 +21,6 @@ Muzayaf is a feature-rich data generation library for Go. It provides a comprehe
   - [Random Source](#random-source)
 - [Examples](#examples)
 - [Testing](#testing)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Installation
