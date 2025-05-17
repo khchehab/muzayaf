@@ -28,6 +28,7 @@ purpose of generating synthetic data for testing and development purposes.
 - [Testing](#testing)
 - [Acknowledgments](#acknowledgments)
 - [License](#license)
+- [Disclaimer](#disclaimer)
 
 ## Installation
 
@@ -343,3 +344,11 @@ fake data. Some of the sample data sets were adapted from Faker.js to provide si
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Disclaimer
+
+This project was primarily created using AI (Jetbrains Junie) with some modifications by myself to fix generated issues and add a personal touch to the implementation and usage patterns.
+As the library matures, I plan to expand its functionality with more manually crafted features and improvements.
+
+The AI assistance helped bootstrap the project quickly, but the library remains under active development with human oversight and direction.
+All contributions, feedback, and suggestions are welcome as this project evolves.
